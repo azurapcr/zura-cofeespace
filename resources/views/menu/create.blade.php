@@ -1,10 +1,10 @@
-```blade
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Menu | Zura Coffee Space</title>
+    <title>Tambah Menu |Coffee Space</title>
 
     <style>
         * {
@@ -151,4 +151,4 @@
     </div>
 </body>
 </html>
-```
+

@@ -166,7 +166,7 @@
 <body>
 
     <aside class="sidebar">
-        <div class="brand">☕ Zura Coffee Space</div>
+        <div class="brand">☕Coffee Space</div>
 
         <a href="{{ route('dashboard') }}">🏠 Dashboard</a>
         <a href="{{ route('menu.index') }}" class="active">☕ Data Menu</a>

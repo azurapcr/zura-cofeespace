@@ -1,10 +1,9 @@
-```blade
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Menu | Zura Coffee Space</title>
+    <title>Edit Menu |Coffee Space</title>
 
     <style>
         * {
@@ -150,4 +149,4 @@
     </div>
 </body>
 </html>
-```
+
