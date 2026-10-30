@@ -7,12 +7,34 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function index()
-    {
-        $menu = Menu::all();
 
-        return view('menu.index', compact('menu'));
+public function index(Request $request)
+{
+    $query = Menu::query();
+
+    // Pencarian berdasarkan nama menu
+    if ($request->filled('search')) {
+        $query->where('nama_menu', 'like', '%' . $request->search . '%');
     }
+
+    // Filter berdasarkan kategori
+    if ($request->filled('kategori')) {
+        $query->where('kategori', $request->kategori);
+    }
+
+    $menu = $query->get();
+
+    // Mengambil daftar kategori
+    $categories = Menu::select('kategori')
+        ->distinct()
+        ->pluck('kategori');
+
+    return view('menu.index', compact(
+        'menu',
+        'categories'
+    ));
+}
+
 
     public function create()
     {

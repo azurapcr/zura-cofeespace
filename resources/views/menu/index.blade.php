@@ -190,6 +190,37 @@
                 </a>
             </div>
 
+<form action="{{ route('menu.index') }}" method="GET" class="search-form">
+
+    <input
+        type="text"
+        name="search"
+        placeholder="Cari nama menu..."
+        value="{{ request('search') }}"
+    >
+
+    <select name="kategori">
+        <option value="">Semua Kategori</option>
+
+        @foreach ($categories as $category)
+            <option value="{{ $category }}"
+                {{ request('kategori') == $category ? 'selected' : '' }}>
+                {{ $category }}
+            </option>
+        @endforeach
+    </select>
+
+    <button type="submit" class="btn btn-search">
+        Cari
+    </button>
+
+    <a href="{{ route('menu.index') }}" class="btn btn-reset">
+        Reset
+    </a>
+
+</form>
+
+
             @if (session('success'))
                 <div class="alert">{{ session('success') }}</div>
             @endif
